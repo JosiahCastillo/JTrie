@@ -8,9 +8,9 @@ int main(){
     
     //setting up strings to insert
     std::string myStrings[3];
-    std::string myStrings[0] = "hello";
-    std::string myStrings[1] = "helps";
-    std::string myStrings[2] = "hand";
+    myStrings[0] = "hello";
+    myStrings[1] = "helps";
+    myStrings[2] = "hand";
     
     //inserting strings
     for(int i = 0; i < 3; i++){
