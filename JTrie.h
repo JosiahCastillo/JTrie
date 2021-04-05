@@ -44,7 +44,7 @@ public:
     //constructor for a JTrie
     JTrie();
 
-    ////used to insert a string into the trie character by character
+    //used to insert a string into the trie character by character
     void insert(std::string input);
 
     //used to determine if a string exists within the trie
