@@ -15,6 +15,7 @@ int main(){
     //inserting strings
     for(int i = 0; i < 3; i++){
         myTrie.insert(myStrings[i]);
+        std::cout << myStrings[i] << " exists." << std::endl;
     }
     
     //confirming they exist
