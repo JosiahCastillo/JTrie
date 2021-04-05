@@ -13,7 +13,7 @@ int main(){
     std::string myStrings[2] = "hand";
     
     //inserting strings
-    for(int i = 0; i < 3; i++{
+    for(int i = 0; i < 3; i++){
         myTrie.insert(myStrings[i]);
     }
     
@@ -29,7 +29,7 @@ int main(){
     //removing "helps"
     myTrie.remove(myStrings[1]);
     std::cout << myStrings[1] << " removed." << std::endl;
-        
+    
     //confirming new trie
     for(int i = 0; i < 3; i++){
         if(myTrie.search(myStrings[i])){
