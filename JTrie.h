@@ -22,27 +22,39 @@ public:
     //used to insert a string into the trie character by character
     void insert(std::string input, int depth);
 
+    //used to determine if a string exists within the trie
     bool search(std::string input, int depth);
 
+    //used to remove a string from a trie
     int remove(std::string input, int depth);
 
 private:
+    //ascii value of the current character
     int key;
+    
+    //all of the child nodes
     std::vector<JTrieNode*> data;
+    
+    //determines if this node represents a complete word
     bool isWord = false;
 };
 
 class JTrie{
 public:
+    //constructor for a JTrie
     JTrie();
 
+    ////used to insert a string into the trie character by character
     void insert(std::string input);
 
+    //used to determine if a string exists within the trie
     bool search(std::string input);
 
+    //used to remove a string from a trie
     void remove(std::string input);
 
 private:
+    //points to the root node of the trie
     JTrieNode* root;
 
 };
