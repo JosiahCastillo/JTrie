@@ -129,7 +129,7 @@ bool JTrieNode::search(std::string input, int depth) {
 int JTrieNode::remove(std::string input, int depth) {
     //if the end of the word has been reached
     if(depth >= input.size()){
-        std::cout << "End of word reached at size: " << data.size() << std::endl;
+        
         //set isWord to false
         isWord = false;
 
@@ -139,28 +139,23 @@ int JTrieNode::remove(std::string input, int depth) {
 
     //if the current data size is 0
     if(data.size() == 0){
-        std::cout << "Data Size at: " << input[depth] << " is: " << data.size() << std::endl;
 
         //return data size
         return data.size();
 
         //otherwise if the node exists within the range of data
     } else {
-        std::cout << "Data Size at: " << input[depth] << " is: " << data.size() << std::endl;
+        
         for (int i = 0; i < data.size(); i++) {
 
             //if the value at i is equal to the value being searched
             if (data[i]->getKey() == input[depth]) {
-                std::cout << data[i]->getKey() << " is equivalent to: " << input[depth] << std::endl;
 
                 //if data size at the node is 0
                 if (data[i]->remove(input, depth + 1) == 0) {
-                    std::cout << data[i]->getKey() << " has no children" << std::endl;
 
                     //delete the node
                     delete data[i];
-
-                    std::cout << "pointer deleted, current value is: " << input[depth] << std::endl;
 
                     //remove the new node at i, its correct sorted position
                     auto it = data.erase(data.begin() + i);
@@ -169,7 +164,6 @@ int JTrieNode::remove(std::string input, int depth) {
                     return data.size();
 
                 } else {
-                    std::cout << data[i]->getKey() << " has children" << std::endl;
                     return data.size();
                 }
             }
